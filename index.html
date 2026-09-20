@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Jostin | Creador de Contenido y Desarrollador</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626', // Red-600
+                        primaryDark: '#b91c1c', // Red-700
+                        darkBg: '#09090b', // Zinc-950
+                        cardBg: '#121216', // Dark gray surface
+                        borderDark: '#27272a' // Zinc-800
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b;
+            color: #f4f4f5;
+        }
+        .glow-red {
+            box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.3);
+        }
+        .glow-red-hover:hover {
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.5);
+        }
+        .bg-grid {
+            background-image: radial-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-zinc-100 min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-darkBg/80 border-b border-borderDark transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-br from-red-600 to-red-900 flex items-center justify-center shadow-lg shadow-red-600/30 border border-red-500/30">
+                    <img src="avatar.JPG" alt="Mr.Jostin Avatar" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentNode.innerHTML='<span class=\'text-white font-black text-xl\'>J</span>';">
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">Mr.<span class="text-red-500">Jostin</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
+                <a href="#inicio" class="hover:text-red-500 transition-colors">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-red-500 transition-colors">Acerca de Mí</a>
+                <a href="#proyectos" class="hover:text-red-500 transition-colors">Proyectos & Series</a>
+                <a href="#redes" class="hover:text-red-500 transition-colors">Redes y Plataformas</a>
+            </nav>
+
+            <div>
+                <a href="#redes" class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold text-white bg-red-600 hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-600/20">
+                    <i class="fa-solid fa-share-nodes mr-2"></i> Conectar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center bg-grid overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-darkBg/60 to-darkBg pointer-events-none"></div>
+            <!-- Decorative Glow Elements -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative max-w-4xl mx-auto text-center space-y-8 z-10">
+                <!-- Profile Avatar Top Section Showcase -->
+                <div class="mx-auto w-28 h-28 rounded-3xl overflow-hidden border-2 border-red-500/50 shadow-2xl shadow-red-600/40 bg-gradient-to-br from-red-600 to-zinc-900 flex items-center justify-center relative group">
+                    <img src="avatar.JPG" alt="Mr.Jostin Profile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.parentNode.innerHTML='<span class=\'text-white font-black text-4xl\'>J</span>';">
+                </div>
+
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs sm:text-sm font-medium animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                    <span>Creador de Contenido & Desarrollador</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
+                    Hola, soy <span class="bg-gradient-to-r from-red-500 via-red-400 to-orange-500 bg-clip-text text-transparent">Mr.Jostin</span>
+                </h1>
+                
+                <p class="max-w-2xl mx-auto text-base sm:text-lg lg:text-xl text-zinc-400 leading-relaxed font-light">
+                    Bienvenido a mi espacio digital oficial. Explora mis estudios de animación, series originales, plataformas exclusivas y todas mis redes sociales en un solo lugar.
+                </p>
+                
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                    <a href="#redes" class="px-8 py-4 rounded-xl font-bold text-white bg-red-600 hover:bg-red-700 transition-all duration-300 shadow-xl shadow-red-600/30 flex items-center space-x-3 glow-red-hover">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Ir a Redes y MrTube</span>
+                    </a>
+                    <a href="#proyectos" class="px-8 py-4 rounded-xl font-semibold text-zinc-300 bg-zinc-900/80 hover:bg-zinc-800 border border-borderDark transition-all duration-300 flex items-center space-x-3">
+                        <i class="fa-solid fa-film text-red-500"></i>
+                        <span>Ver Proyectos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="py-24 bg-cardBg/40 border-y border-borderDark relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="inline-flex items-center space-x-2 text-red-500 font-semibold text-sm uppercase tracking-wider">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <span>Biografía Profesional</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                            Pasión por la animación, el desarrollo y las historias únicas.
+                        </h2>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Como creador multifacético, me dedico a dar vida a mundos virtuales, animaciones originales y plataformas independientes. Fundador de estudios y proyectos artísticos enfocados en la cultura gamer y la narrativa visual.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-4">
+                            <div class="p-5 rounded-2xl bg-darkBg border border-borderDark">
+                                <div class="text-3xl font-extrabold text-red-500 mb-1">+5</div>
+                                <div class="text-xs text-zinc-400 font-medium uppercase tracking-wider">Proyectos Activos</div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-darkBg border border-borderDark">
+                                <div class="text-3xl font-extrabold text-red-500 mb-1">100%</div>
+                                <div class="text-xs text-zinc-400 font-medium uppercase tracking-wider">Original & Independiente</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/50 transition-all duration-300 group">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl mb-4 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-clapperboard"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">ABG Productions</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                Productora creativa impulsada a la creación de contenido audiovisual original y entretenimiento digital dinámico.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/50 transition-all duration-300 group">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl mb-4 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Sprunki Animations Studios</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                Estudio especializado en animaciones temáticas, visuales vanguardistas y desarrollo de universos animados memorables.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/50 transition-all duration-300 sm:col-span-2 group">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl mb-4 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-tv"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Series Destacadas</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                Creador de producciones aclamadas como <strong class="text-white font-semibold">El Misterio De Chicken Gun</strong>, <strong class="text-white font-semibold">Dandy's World Show</strong> y <strong class="text-white font-semibold">Sprunki Animado</strong>. Historias diseñadas para cautivar a la audiencia en cada episodio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center space-x-2 text-red-500 font-semibold text-sm uppercase tracking-wider">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Universo de Creación</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Series y Producciones</h2>
+                <p class="text-zinc-400">Conoce los proyectos principales que forman parte de mi trayectoria artística.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-red-600/50 transition-all duration-300 group flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-red-950 via-zinc-900 to-darkBg relative flex items-center justify-center overflow-hidden border-b border-borderDark">
+                        <div class="absolute inset-0 bg-grid opacity-30"></div>
+                        <i class="fa-solid fa-gamepad text-5xl text-red-500 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-red-500 uppercase tracking-widest block mb-2">Serie Animada</span>
+                            <h3 class="text-xl font-bold text-white mb-2">El Misterio De Chicken Gun</h3>
+                            <p class="text-sm text-zinc-400">Una aventura llena de misterio, acción y situaciones inesperadas dentro del universo de Chicken Gun.</p>
+                        </div>
+                        <div class="pt-4 border-t border-borderDark flex items-center justify-between text-xs text-zinc-400">
+                            <span>ABG Productions</span>
+                            <span class="text-red-500 font-semibold">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-red-600/50 transition-all duration-300 group flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-red-950 via-zinc-900 to-darkBg relative flex items-center justify-center overflow-hidden border-b border-borderDark">
+                        <div class="absolute inset-0 bg-grid opacity-30"></div>
+                        <i class="fa-solid fa-masks-theater text-5xl text-red-500 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-red-500 uppercase tracking-widest block mb-2">Show Animado</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Dandy's World Show</h3>
+                            <p class="text-sm text-zinc-400">Espectáculo visual con carismáticos personajes y tramas atrapantes que mantienen al espectador pegado a la pantalla.</p>
+                        </div>
+                        <div class="pt-4 border-t border-borderDark flex items-center justify-between text-xs text-zinc-400">
+                            <span>Mr.Jostin Presents</span>
+                            <span class="text-red-500 font-semibold">Popular</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-red-600/50 transition-all duration-300 group flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-red-950 via-zinc-900 to-darkBg relative flex items-center justify-center overflow-hidden border-b border-borderDark">
+                        <div class="absolute inset-0 bg-grid opacity-30"></div>
+                        <i class="fa-solid fa-video text-5xl text-red-500 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-red-500 uppercase tracking-widest block mb-2">Animación Digital</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Sprunki Animado</h3>
+                            <p class="text-sm text-zinc-400">Producción basada en el fenómeno Sprunki con animación cuidada al detalle desarrollada en Sprunki Animations Studios.</p>
+                        </div>
+                        <div class="pt-4 border-t border-borderDark flex items-center justify-between text-xs text-zinc-400">
+                            <span>Sprunki Studios</span>
+                            <span class="text-red-500 font-semibold">Destacado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="redes" class="py-24 bg-cardBg/60 border-t border-borderDark relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <div class="inline-flex items-center space-x-2 text-red-500 font-semibold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Conexión Directa</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Redes Sociales y Plataformas</h2>
+                    <p class="text-zinc-400">Sígueme en mis redes oficiales o visita mi propia plataforma de videos MrTube para no perderte ningún contenido.</p>
+                </div>
+
+                <!-- Featured Custom Platform: MrTube -->
+                <div class="mb-12">
+                    <a href="https://mrjostin87.github.io/MrTube/" target="_blank" rel="noopener noreferrer" 
+                       class="block group relative rounded-3xl overflow-hidden bg-gradient-to-r from-red-950/80 via-zinc-900 to-darkBg border border-red-600/40 p-8 sm:p-10 transition-all duration-300 hover:border-red-500 hover:shadow-2xl hover:shadow-red-600/20">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-red-600/15 rounded-full blur-2xl group-hover:bg-red-600/25 transition-all"></div>
+                        <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div class="flex items-center space-x-6 text-center sm:text-left">
+                                <div class="w-20 h-20 rounded-2xl bg-red-600 text-white flex items-center justify-center text-4xl shadow-lg shadow-red-600/40 flex-shrink-0 group-hover:scale-105 transition-transform">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="space-y-2">
+                                    <span class="inline-block px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-bold tracking-widest uppercase">Plataforma Exclusiva</span>
+                                    <h3 class="text-2xl sm:text-3xl font-black text-white group-hover:text-red-400 transition-colors">MrTube</h3>
+                                    <p class="text-sm sm:text-base text-zinc-300 max-w-xl">La plataforma de videos creada por mí mismo para compartir todo mi contenido audiovisual y proyectos independientes.</p>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-red-600 text-white font-bold text-sm group-hover:bg-red-500 transition-colors shadow-lg">
+                                    <span>Visitar MrTube</span>
+                                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Grid of Social Networks -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@mr.jostin__oficial" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/60 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-800 text-white flex items-center justify-center text-2xl mr-4 group-hover:bg-red-600 group-hover:border-red-600 transition-all">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">TikTok</h3>
+                            <p class="text-xs text-zinc-400">@mr.jostin__oficial</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- X (Twitter) -->
+                    <a href="https://x.com/MrJostinMC" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/60 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-800 text-white flex items-center justify-center text-2xl mr-4 group-hover:bg-red-600 group-hover:border-red-600 transition-all">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">X (Twitter)</h3>
+                            <p class="text-xs text-zinc-400">@MrJostinMC</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Wattpad -->
+                    <a href="https://www.wattpad.com/user/MrJostin" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/60 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-800 text-orange-500 flex items-center justify-center text-2xl mr-4 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">Wattpad</h3>
+                            <p class="text-xs text-zinc-400">user/MrJostin</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Talkie -->
+                    <a href="https://short.talkie-ai.com/okSk8cD71Wb" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/60 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-800 text-red-500 flex items-center justify-center text-2xl mr-4 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">Talkie</h3>
+                            <p class="text-xs text-zinc-400">Interactúa conmigo</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/mr.jostin_oficial?" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/60 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-800 text-pink-500 flex items-center justify-center text-2xl mr-4 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">Instagram</h3>
+                            <p class="text-xs text-zinc-400">@mr.jostin_oficial</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Roblox -->
+                    <a href="https://www.roblox.com/es/users/8171848363/profile" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center p-6 rounded-2xl bg-darkBg border border-borderDark hover:border-red-500/60 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-800 text-white flex items-center justify-center text-2xl mr-4 group-hover:bg-red-600 group-hover:border-red-600 transition-all">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">Roblox</h3>
+                            <p class="text-xs text-zinc-400">Perfil Oficial</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-darkBg border-t border-borderDark py-12 text-center text-sm text-zinc-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <div class="w-8 h-8 rounded-lg overflow-hidden bg-red-600 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                    <img src="avatar.JPG" alt="Mr.Jostin Avatar" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentNode.innerHTML='J';">
+                </div>
+                <span class="text-white font-bold">Mr.<span class="text-red-500">Jostin</span></span>
+            </div>
+            <p>© 2026 Mr.Jostin. Todos los derechos reservados. Creador de contenido, animador y desarrollador.</p>
+            <div class="flex justify-center space-x-6 text-zinc-400 pt-2">
+                <a href="https://www.tiktok.com/@mr.jostin__oficial" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-tiktok text-lg"></i></a>
+                <a href="https://x.com/MrJostinMC" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="https://www.instagram.com/mr.jostin_oficial?" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="https://mrjostin87.github.io/MrTube/" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-solid fa-play text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
